@@ -1,0 +1,128 @@
+.listplay-popup,
+.listplay-popup:root {
+  color-scheme: light;
+  --bg: #0c1116;
+  --panel: #111824;
+  --accent: #3ccf91;
+  --muted: #9fb0c0;
+  --text: #e8f0f7;
+  --border: #1d2938;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --radius: 12px;
+}
+
+.listplay-popup {
+  margin: 0;
+  padding: 16px;
+  width: 360px;
+  font-family: "Segoe UI", "Inter", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.listplay-popup .card {
+  background: linear-gradient(145deg, #0f1722, #0a0f17);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.listplay-popup header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.listplay-popup h1 {
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.listplay-popup .badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(60, 207, 145, 0.1);
+  color: var(--accent);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.listplay-popup .meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.listplay-popup .tracks {
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.listplay-popup .tracks li {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.listplay-popup .tracks li:last-child {
+  border-bottom: none;
+}
+
+.listplay-popup .track-title {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.listplay-popup .track-artist {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.listplay-popup .actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.listplay-popup button {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: linear-gradient(90deg, #1d2938, #111824);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.listplay-popup button.primary {
+  background: linear-gradient(90deg, #3ccf91, #2cab7c);
+  color: #0a0f17;
+  border: none;
+  box-shadow: 0 10px 20px rgba(60, 207, 145, 0.3);
+}
+
+.listplay-popup button:hover {
+  transform: translateY(-1px);
+}
+
+.listplay-popup .empty {
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}

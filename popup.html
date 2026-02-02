@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ListPlay</title>
+        <link rel="stylesheet" href="content-style.css" />
+    </head>
+    <body class="listplay-popup">
+        <div class="card">
+            <header>
+                <h1>ListPlay</h1>
+                <span id="platform-chip" class="badge">Waiting</span>
+            </header>
+            <div class="meta">
+                <div>
+                    <strong>Playlist</strong>
+                    <div id="playlist-name">No playlist detected</div>
+                </div>
+                <div>
+                    <strong>Tracks</strong>
+                    <div id="track-count">0</div>
+                </div>
+            </div>
+            <ul id="track-list" class="tracks"></ul>
+            <div id="empty-state" class="empty" style="display: none">
+                Open a playlist on Spotify, Apple Music, or YouTube Music, then
+                click refresh.
+            </div>
+            <div class="actions">
+                <button id="copy" class="primary">Copy Playist</button>
+            </div>
+            <div class="actions">
+                <button id="add-to-playlist" class="primary">
+                    Add to Playlist
+                </button>
+                <button id="clear">Clear</button>
+            </div>
+            <div
+                id="status-message"
+                class="empty"
+                style="
+                    display: none;
+                    margin-top: 10px;
+                    padding: 8px;
+                    font-size: 12px;
+                "
+            ></div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>

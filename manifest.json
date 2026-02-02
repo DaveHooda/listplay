@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "listplay",
+    "version": "1.0",
+    "description": "Transfers your playlist from one music service to another",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://open.spotify.com/playlist/*",
+                "https://music.youtube.com/playlist*",
+                "https://music.apple.com/*/playlist/*"
+            ],
+            "js": ["content-script.js"],
+            "css": ["content-style.css"],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "ListPlay"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "permissions": ["storage", "scripting", "activeTab", "tabs"],
+    "host_permissions": [
+        "https://open.spotify.com/playlist/*",
+        "https://music.youtube.com/playlist*",
+        "https://music.apple.com/*/playlist/*"
+    ]
+}
